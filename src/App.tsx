@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from 'react-query'
-import ForexRates from './components/ForexRates'
 import NavBar from './components/NavBar'
 import { useState } from 'react'
+import Dashboard from './components/Dashboard'
 
 function App() {
   const [currency, setCurrency] = useState('USD')
@@ -14,7 +14,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <NavBar handleCurrencyChange={handleCurrencyChange} />
-      <ForexRates currency={currency} />
+      <Dashboard currency={currency} />
     </QueryClientProvider>
   )
 }
