@@ -6,6 +6,7 @@ export const useDataFetch = (currency?: string) => {
     queryFn: () =>
       fetch(`https://api.exchangerate.host/latest?base=${currency}`).then(
         (res) => res.json()
-      )
+      ),
+    cacheTime: 6 * 60 * 60 * 1000
   })
 }

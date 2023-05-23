@@ -14,7 +14,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <NavBar handleCurrencyChange={handleCurrencyChange} />
-      <Dashboard currency={currency} />
+      <Dashboard chosenCurrency={currency} currency={currency} />
     </QueryClientProvider>
   )
 }
